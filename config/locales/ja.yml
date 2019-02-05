@@ -1,0 +1,49 @@
+ja:
+  activerecord:
+    models:
+      books: 書籍情報
+    attributes:
+      book:
+        title: 書籍名
+        memo: 説明
+        author: 著者名
+        picture: 画像
+        created_at: 登録日
+        updated_at: 更新日
+  books:
+    index:
+      books: 書籍一覧
+      title: 書籍名
+      memo: 説明
+      author: 著者名
+      picture: 画像
+      edit: 編集
+      show: 表示
+      destroy: 削除
+      new_book: 新規作成
+      delete_confirm: "本当に削除してもよろしいですか？"
+    show:
+      title: 書籍名
+      memo: 説明
+      author: 著者名
+      picture: 画像
+      edit: 編集
+      back: 戻る
+    new:
+      create_book: 新規登録
+      back: 戻る
+    edit:
+      edit: 書籍の編集
+      show: 表示
+      back: 戻る
+    create:
+      success: "書籍が作成されました。"
+    update:
+      success: "書籍が更新されました。"
+    destroy:
+      success: "書籍を削除しました。"
+    form:
+      title: 書籍名
+      memo: 説明
+      author: 著者名
+      picture: 画像
