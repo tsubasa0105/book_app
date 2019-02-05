@@ -72,7 +72,7 @@ en:
     update:
       success: "Book is successfully updated!"
     destroy:
-      success: "Book id successfully deleted!"
+      success: "Book is successfully deleted!"
     form:
       title: Title
       memo: Memo
