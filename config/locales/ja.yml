@@ -47,3 +47,12 @@ ja:
       memo: 説明
       author: 著者名
       picture: 画像
+  layouts:
+    application:
+      logged_in_as: "ようこそ"
+      edit_profile: "プロフィールを編集する"
+      log_out: ログアウト
+      sign_up: サインアップ
+      login: ログイン
+
+

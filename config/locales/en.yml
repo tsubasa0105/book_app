@@ -80,3 +80,11 @@ en:
       picture: Picture 
       one: "There is one error."
       other: "There are %{count} errors." 
+  layouts:
+    application:
+      logged_in_as: "Logged in as"
+      edit_profile: "Edit profile"
+      log_out: Log out
+      sign_up: Sign up
+      login: Log in
+
