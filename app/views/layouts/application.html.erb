@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <%= link_to_if params[:locale].present?, '日本語',  url_for(controller: controller.controller_name, action: controller.action_name, locale: 'ja') %> |
+    <%= link_to_if params[:locale] != 'en',  'English',  url_for(controller: controller.controller_name, action: controller.action_name, locale: 'en') %>
     <%= yield %>
   </body>
 </html>
