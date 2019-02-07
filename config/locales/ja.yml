@@ -47,3 +47,10 @@ ja:
       memo: 説明
       author: 著者名
       picture: 画像
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      next: "次 &rsaquo;"
+      previous: "&lsaquo; 前"
+      truncate: "&hellip;"
