@@ -54,3 +54,10 @@ ja:
       next: "次 &rsaquo;"
       previous: "&lsaquo; 前"
       truncate: "&hellip;"
+  layouts:
+    application:
+      logged_in_as: "ようこそ"
+      edit_profile: "プロフィールを編集する"
+      log_out: ログアウト
+      sign_up: サインアップ
+      login: ログイン

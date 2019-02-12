@@ -12,6 +12,25 @@
   <body>
     <%= link_to_if params[:locale].present?, '日本語',  url_for(controller: controller.controller_name, action: controller.action_name, locale: 'ja') %> |
     <%= link_to_if params[:locale] != 'en',  'English',  url_for(controller: controller.controller_name, action: controller.action_name, locale: 'en') %>
+
+    <p class="navbar-text pull-right">
+      <% if user_signed_in? %>
+        <%= t('.logged_in_as') %><strong><%= current_user.email %></strong>.
+        <%= link_to t('.edit_profile') , edit_user_registration_path, class: 'navbar-link' %> |
+        <%= link_to t('.log_out'), destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
+      <% else %>
+        <%= link_to t('.sign_up'), new_user_registration_path, class: 'navbar-link'  %> |
+        <%= link_to t('.login'), new_user_session_path, class: 'navbar-link'  %>
+      <% end %>
+    </p>
+
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

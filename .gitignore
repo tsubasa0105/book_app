@@ -32,3 +32,6 @@
 
 # Ignore all files in vendor.
 /vendor/*
+
+# Ignore test file
+/test/
