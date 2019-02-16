@@ -35,3 +35,6 @@
 
 # Ignore test file
 /test/
+
+# Ignore .env
+/.env
