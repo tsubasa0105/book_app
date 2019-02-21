@@ -10,6 +10,8 @@ ja:
         picture: 画像
         created_at: 登録日
         updated_at: 更新日
+      user:
+        avatar: プロフィール写真
   books:
     index:
       books: 書籍一覧
@@ -61,3 +63,10 @@ ja:
       log_out: ログアウト
       sign_up: サインアップ
       login: ログイン
+  devise:
+    registrations:
+      edit:
+        minimum_password_length: "（文字以上）"
+        update: 更新
+        back: 戻る
+        edit_user: "ユーザーの編集"
