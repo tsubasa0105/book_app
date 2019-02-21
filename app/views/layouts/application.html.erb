@@ -16,6 +16,7 @@
     <p class="navbar-text pull-right">
       <% if user_signed_in? %>
         <%= t('.logged_in_as') %><strong><%= current_user.email %></strong>.
+        <%= image_tag current_user.avatar.variant(resize: "100x100") %>
         <%= link_to t('.edit_profile') , edit_user_registration_path, class: 'navbar-link' %> |
         <%= link_to t('.log_out'), destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
       <% else %>
