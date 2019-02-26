@@ -38,3 +38,7 @@
 
 # Ignore .env
 /.env
+
+# Ignore files related to i18n
+config/locales/ja.yml
+app/views/users/shared/
