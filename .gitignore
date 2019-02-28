@@ -38,3 +38,6 @@
 
 # Ignore .env
 /.env
+
+# Ignore unnecessary picture
+app/assets/images/sample_pic.png
