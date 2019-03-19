@@ -7,14 +7,11 @@ RSpec.feature "Books", type: :feature do
     @user = FactoryBot.create(:user, email: "testtest@example.com")
     @book = FactoryBot.create(:book)
 
-    visit root_path
-    click_link "ログイン"
-    fill_in "Eメール", with: @user.email
-    fill_in "パスワード", with: @user.password
-    click_button "ログイン"
+    sign_in @user
   end
 
-  scenario "login user creates a new book" do
+  scenario "creates a new book" do
+    visit books_path
     expect {
       click_link "新規作成"
       fill_in "書籍名", with: "テスト書籍"
@@ -28,19 +25,19 @@ RSpec.feature "Books", type: :feature do
     }.to change(Book, :count).by(1)
   end
 
-  scenario "login user lists all books" do
+  scenario "lists all books" do
     visit books_path
     expect(page).to have_content "書籍一覧"
   end
 
-  scenario "login user shows a created book" do
+  scenario "shows a created book" do
     visit books_path(id: @book.id)
     expect(page).to have_content "テスト名前"
     expect(page).to have_content "テスト説明"
     expect(page).to have_content "テスト著者名"
   end
 
-  scenario "login user updates a contents of a created book" do
+  scenario "updates a contents of a created book" do
     visit edit_book_path(id: @book.id)
     expect(page).to have_field "書籍名", with: "テスト名前"
 
@@ -52,7 +49,8 @@ RSpec.feature "Books", type: :feature do
     expect(page).to have_css("img[src*='.jpg']")
   end
 
-  scenario "login user deletes a created book" do
+  scenario "deletes a created book" do
+    visit books_path
     first(:link, "削除").click
     expect(page).to have_content "書籍を削除しました。"
   end
