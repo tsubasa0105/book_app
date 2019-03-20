@@ -51,7 +51,9 @@ RSpec.feature "Books", type: :feature do
 
   scenario "deletes a created book" do
     visit books_path
-    first(:link, "削除").click
-    expect(page).to have_content "書籍を削除しました。"
+    expect {
+      first(:link, "削除").click
+      expect(page).to have_content "書籍を削除しました。"
+    }.to change(Book, :count).by(-1)
   end
 end
