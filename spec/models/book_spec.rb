@@ -29,4 +29,8 @@ RSpec.describe Book, type: :model do
     book.valid?
     expect(book.errors[:author]).to include("を入力してください")
   end
+
+  it "is valid with a picture under 2megabytes" do
+    expect(File.size("#{Rails.root}/spec/files/test_picture.jpg")).to be <= 2.megabytes
+  end
 end
