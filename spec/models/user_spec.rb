@@ -30,16 +30,16 @@ RSpec.describe User, type: :model do
     it "fills a email data from sessoin if user email is blank" do
       session = {
         "devise.facebook_data" => {
-        "provider" => "facebook",
-        "uid" => "283283",
-        "name" => "testuser",
-        "email" => "testuser@example.com",
-        "credentials" => {
-          "token" => "testtoken"
-        },
-        "extra" => {
-          "raw_info" => "raw_info"
-        }
+          "provider" => "facebook",
+          "uid" => "283283",
+          "name" => "testuser",
+          "email" => "testuser@example.com",
+          "credentials" => {
+            "token" => "testtoken"
+          },
+          "extra" => {
+            "raw_info" => "raw_info"
+          }
         }
       }
       data = session
